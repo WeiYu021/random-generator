@@ -1,0 +1,13 @@
+{
+    "i18n-ally.localesPaths": [
+        "messages"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "eslint.workingDirectories": ["./"],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ]
+}
