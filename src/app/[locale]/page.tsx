@@ -3,7 +3,8 @@ import React, { Suspense } from 'react'; // 确保导入 React
 import { getPostDataByLocale } from '@/lib/posts'
 // import { getCategories } from '@/lib/data';
 
-import TarotCard from '@/components/TarotCard'; // 新增导入
+// import TarotCard from '@/components/TarotCard'; // 新增导入
+import RandomQrCode from '@/components/RandomQrCode';
 
 import {getTranslations, getLocale} from 'next-intl/server';
 
@@ -42,7 +43,7 @@ export default async function Home() {
 
       {/* 新增计算器部分 */}
       <Suspense fallback={<div>{t("loading")}</div>}>
-        <TarotCard locale={locale} />
+        <RandomQrCode/>
       </Suspense>
 
       <section className="flex flex-col items-center justify-center text-center space-y-6">
@@ -53,10 +54,10 @@ export default async function Home() {
           {t("description")}
         </p> */}
       </section>
-      <div
+      {/* <div
         className="prose prose-lg dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+      /> */}
       {/* ... existing commented code ... */}
     </div>
   )

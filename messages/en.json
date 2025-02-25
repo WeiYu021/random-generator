@@ -91,6 +91,21 @@
     "judgement": "Judgement",
     "theworld": "The World"
   },
+  "qrcode": {
+    "url": "Random URL",
+    "email": "Email Message",
+    "text": "Random Text",
+    "sms": "SMS Message",
+    "tel": "Phone Number",
+    "wifi": "Wi-Fi Network",
+    "generateButton": "Generate QR",
+    "copyButton": "Copy Content",
+    "typeLabel": "QR Type",
+    "randomSubject": "Test Subject",
+    "randomBody": "This is a test email body",
+    "randomText": "Random text content:",
+    "randomMessage": "Test message content"
+  },
   "category": {
     "meta_title": "Category",
     "meta_description": "Find Every Essential Developer Tools You Need For Your Development Journey",
