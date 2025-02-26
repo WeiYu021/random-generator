@@ -1,0 +1,48 @@
+﻿// 示例数据
+// {
+//   "name": "Tailwind CSS",
+//   "description": "一个实用优先的 CSS 框架",
+//   "slug": "tailwindcss",
+//   ...如果需要可以添加其他键
+// }
+// 
+// 注意：
+// 1. 所有数据应按字母顺序排序。
+// 2. 不允许使用联盟链接
+// 3. 请勿提交与开发无关的工具。
+
+
+[
+    // A
+    // B
+    // C
+    // D
+    // E
+    // F
+    // G
+    // H
+    // I
+    // J
+    // K
+    // L
+    // M
+    // N
+    // O
+    // P
+    // Q
+    // R
+    {
+        "name": "Random QR Code",
+        "description": "Generate unique random QR codes for URLs, emails, SMS, WiFi & more. Instantly create dynamic QR codes with random content. Free online tool with 6+ data types. No registration required!",
+        "slug": "random-qr-code"
+    }
+    // S
+    // T
+    // U
+
+    // V
+    // W
+    // X
+    // Y
+    // Z
+  ]

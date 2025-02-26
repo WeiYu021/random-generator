@@ -4,13 +4,12 @@ import { getPostDataByLocale } from '@/lib/posts'
 // import { getCategories } from '@/lib/data';
 
 // import TarotCard from '@/components/TarotCard'; // 新增导入
-import ToolsList from '@/components/ToolsList';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { QrCodeIcon } from "lucide-react";
+import RandomQrCode from '@/components/RandomQrCode';
+
 import {getTranslations, getLocale} from 'next-intl/server';
 
 export async function generateMetadata() {
-  const t = await getTranslations('home');
+  const t = await getTranslations('qrcode');
   return {
     title: t("meta_title"),
     description: t("meta_description"),
@@ -28,7 +27,7 @@ export async function generateMetadata() {
 
 export default async function Home() {
   const locale = await getLocale();
-  const postData = await getPostDataByLocale(locale, "homepage");
+  const postData = await getPostDataByLocale(locale, "qrcode");
   const t = await getTranslations('home');
   // categories data
   // const categories = getCategories(locale);
@@ -42,13 +41,16 @@ export default async function Home() {
     <div className="container mx-auto py-12 space-y-16">
       <section className="flex flex-col items-center justify-center text-center space-y-6">
         <h1 className="mx-auto max-w-3xl text-3xl font-bold lg:text-7xl tracking-tighter">
-          <span className="inline-block">Anything Random</span>
+          <span className="inline-block">Instant Random QR Code Generator - 6+ Dynamic Types</span>
         </h1>
       </section>
 
+      {/* 新增计算器部分 */}
       <section className="flex flex-col items-center justify-center min-h-[60vh]">
         <Suspense fallback={<div className="text-center">{t("loading")}</div>}>
-          <ToolsList/>
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-md">
+            <RandomQrCode/>
+          </div>
         </Suspense>
       </section>
 
@@ -60,10 +62,10 @@ export default async function Home() {
           {t("description")}
         </p>
       </section> */}
-      {/* <div
+      <div
         className="prose prose-lg dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      /> */}
+      />
       {/* ... existing commented code ... */}
     </div>
   )
