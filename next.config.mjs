@@ -30,10 +30,6 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'llmgpuhelper.com',
       },
-      {
-        protocol: 'https',
-        hostname: 'images.tarotcardgenerator.org',
-      }
     ],
     // 允许加载svg图片
     dangerouslyAllowSVG: true,

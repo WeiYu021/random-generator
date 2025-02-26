@@ -28,7 +28,7 @@ export async function generateMetadata() {
 export default async function Home() {
   const locale = await getLocale();
   const postData = await getPostDataByLocale(locale, "qrcode");
-  const t = await getTranslations('home');
+  const t = await getTranslations('qrcode');
   // categories data
   // const categories = getCategories(locale);
   // console.log('categories: ', categories)
@@ -41,7 +41,7 @@ export default async function Home() {
     <div className="container mx-auto py-12 space-y-16">
       <section className="flex flex-col items-center justify-center text-center space-y-6">
         <h1 className="mx-auto max-w-3xl text-3xl font-bold lg:text-7xl tracking-tighter">
-          <span className="inline-block">Instant Random QR Code Generator - 6+ Dynamic Types</span>
+          <span className="inline-block">{t("title")}</span>
         </h1>
       </section>
 

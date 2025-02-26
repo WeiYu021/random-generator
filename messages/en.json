@@ -1,13 +1,14 @@
 {
   "home": {
-    "meta_title": "Tarot Card Generator: Flip Tarot Cards for Love, Career & Destiny",
-    "meta_description": "Reveal your destiny with our interactive tarot card generator!",
-    "h1": "Uncover Your Destiny with Free AI-Powered Tarot Card Readings",
-    "description": "Explore ancient wisdom through modern technology! Generate 3 random tarot cards online, flip to reveal AI-guided interpretations. Get personalized insights for love, career & life decisions in seconds.",
-    "loading": "loading"
+    "meta_title": "AnythingRandom | Instant Random Generators for Codes, Texts & More",
+    "meta_description": "Generate random QR codes, unique text strings, disposable passwords and AI-powered content instantly. Explore endless possibilities with our secure online randomization tools.",
+    "h1": "Your Ultimate Randomization Hub",
+    "description": "Discover the power of true randomness with our AI-enhanced generators.",
+    "loading": "Generating randomness..."
   },
   "qrcode": {
-    "meta_title":"Random QR Code Generator | Dynamic Instant Creation Tool",
+    "title": "Instant Random QR Code Generator - 6+ Dynamic Types",
+    "meta_title":"AnythingRandom | Random QR Code Generator",
     "meta_description":"Generate unique random QR codes for URLs, emails, SMS, WiFi & more. Instantly create dynamic QR codes with random content. Free online tool with 6+ data types. No registration required!",
     
     "url": "Random URL",
@@ -75,7 +76,7 @@
     "submitToolBtn": "Submit Tool"
   },
   "footer": {
-    "description": "Reveal your destiny with our interactive tarot card generator!",
+    "description": "Discover the power of true randomness with our AI-enhanced generators.",
     "builtWith": "Built with",
     "quickLinks": "Quick Links",
     "home": "Home",

@@ -45,6 +45,23 @@ export function getDataList(src, locale) {
     return dataList;
 }
 
+// 读取 datalist 数据
+export function getToolList(locale) {
+    const dataPath = path.join(process.cwd(), 'data', 'json', locale, 'tool.jsonc');
+    const dataList = jsonc.parse(fs.readFileSync(dataPath, 'utf8'));
+    if (typeof dataList === 'string') {
+        // 如果解析后仍是字符串，可能需要二次解析
+        try {
+            return jsonc.parse(dataList);
+        } catch (error) {
+            console.error('二次解析失败:', error);
+            return dataList; // 如果二次解析失败，返回原始解析结果
+        }
+    }
+
+    return dataList;
+}
+
 // 根据关键词搜索数据
 export function searchDataByKeyword(keyword, locale) {
     let result = []

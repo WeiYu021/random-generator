@@ -5,8 +5,6 @@ import { getPostDataByLocale } from '@/lib/posts'
 
 // import TarotCard from '@/components/TarotCard'; // 新增导入
 import ToolsList from '@/components/ToolsList';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { QrCodeIcon } from "lucide-react";
 import {getTranslations, getLocale} from 'next-intl/server';
 
 export async function generateMetadata() {
@@ -48,7 +46,7 @@ export default async function Home() {
 
       <section className="flex flex-col items-center justify-center min-h-[60vh]">
         <Suspense fallback={<div className="text-center">{t("loading")}</div>}>
-          <ToolsList/>
+          <ToolsList locale={locale} />
         </Suspense>
       </section>
 

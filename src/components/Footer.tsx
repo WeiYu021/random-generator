@@ -22,19 +22,19 @@ export function Footer() {
                   height={size}
                   alt="DomainScore"
                 />
-                <span className="inline-block font-bold">Tarot Card Generator</span>
+                <span className="inline-block font-bold">Anything Random</span>
               </Link>
             </h3>
             <p className="mt-4 text-xs ">
               {t('description')}
               
             </p>
-            <div className='mt-4 text-xs '>
+            {/* <div className='mt-4 text-xs '>
               {t('builtWith')}
               <Link href="https://gitbase.app/" target='_black' className="ml-1 text-xs underline">
                 GitBase
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className=''>
             <h3 className="text-sm font-semibold  tracking-wider uppercase">{t('quickLinks')}</h3>
@@ -90,7 +90,7 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t pt-8">
           <p className="text-base text-center">
-            &copy; {new Date().getFullYear()} DevToolset. {t('copyright')}
+            &copy; {new Date().getFullYear()} AnythingRandom. {t('copyright')}
           </p>
         </div>
       </div>

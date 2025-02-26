@@ -8,6 +8,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1,
     },
+    {
+      url: 'random-qr-code', // random-qr-code
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: 'zh', // home
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    {
+      url: 'zh/random-qr-code', // random-qr-code
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
     // {
     //     url: 'tools', // tools
     //     lastModified: new Date(),
