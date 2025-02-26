@@ -10,9 +10,13 @@ import {getTranslations, getLocale} from 'next-intl/server';
 
 export async function generateMetadata() {
   const t = await getTranslations('qrcode');
+  const locale = await getLocale();
   return {
     title: t("meta_title"),
     description: t("meta_description"),
+    alternates: {
+      "canonical": locale === 'en' ? 'https://anythingrandom.net' : `https://anythingrandom.net/${locale}`,
+    }
   };
 }
 

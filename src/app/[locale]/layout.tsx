@@ -22,16 +22,20 @@ const sansFont = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Tarot Card Generator: : Flip Tarot Cards for Love, Career & Destiny',
-    template: '%s | Tarot Card Generator'
+    "default": "AnythingRandom | QR Codes, Passwords & AI Content Generators",
+    "template": "%s | Secure Randomization Engine"
   },
-  description: 'Reveal Your Destiny With Our Interactive Tarot Card Generator!',
-  authors: { name: 'tarotcardgenerator', url: 'https://tarotcardgenerator.org/' },
-  keywords: '',
+  description: "Generate cryptographically secure random data with dynamic parameters. Create disposable QR codes, unpredictable text strings, AI-powered content variations and more with military-grade algorithms.",
+  authors: {
+    "name": "AnythingRandom Labs",
+    "url": "https://anythingrandom.net/"
+  },
+  keywords: "",
   alternates: {
-    canonical: "https://tarotcardgenerator.org/", languages: {
-      "en-US": "https://tarotcardgenerator.org/en/",
-      "zh-CN": "https://tarotcardgenerator.org/zh/",
+    "canonical": "https://anythingrandom.net/",
+    "languages": {
+      "en-US": "https://anythingrandom.net/en/",
+      "zh-CN": "https://anythingrandom.net/zh/"
     }
   },
   icons: [

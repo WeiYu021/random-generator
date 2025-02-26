@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const routeUrl = route.url === '' ? '' : `/${route.url}`;
     return {
         ...route,
-        url: `https://tarotcardgenerator.org${routeUrl}`,
+        url: `https://anythingrandom.net${routeUrl}`,
       };
     }
   );
