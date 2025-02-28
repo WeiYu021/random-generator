@@ -15,7 +15,7 @@ export async function generateMetadata() {
     title: t("meta_title"),
     description: t("meta_description"),
     alternates: {
-      "canonical": locale === 'en' ? 'https://anythingrandom.net' : `https://anythingrandom.net/${locale}`,
+      "canonical": locale === 'en' ? `${process.env.WEB_URL}/random-qr-code` : `${process.env.WEB_URL}/${locale}/random-qr-code`,
     }
   };
 }

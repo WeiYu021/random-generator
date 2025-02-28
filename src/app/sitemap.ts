@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { appConfig } from '@/lib/appConfig';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const sitemapRoutes: MetadataRoute.Sitemap = [
+  const defaultRoutes: MetadataRoute.Sitemap = [
     {
       url: '', // home
       lastModified: new Date(),
@@ -9,57 +10,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'random-qr-code', // random-qr-code
+      url: 'random-qr-code',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,
     },
-    {
-      url: 'zh', // home
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    {
-      url: 'zh/random-qr-code', // random-qr-code
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    },
-    // {
-    //     url: 'tools', // tools
-    //     lastModified: new Date(),
-    //     changeFrequency: 'daily',
-    //     priority: 0.9,
-    //   },
-    // {
-    //   url: 'category', // category
-    //   lastModified: new Date(),
-    //   changeFrequency: 'daily',
-    //   priority: 0.9,
-    // },
-    // {
-    //     url: 'article', // article
-    //     lastModified: new Date(),
-    //     changeFrequency: 'daily',
-    //     priority: 0.8,
-    //   },
-    //   {
-    //     url: 'changelog', // changelog
-    //     lastModified: new Date(),
-    //     changeFrequency: 'daily',
-    //     priority: 0.7,
-    //   },
   ];
 
-  const sitemapData = sitemapRoutes.flatMap((route) => {
+  const localizedRoutes: MetadataRoute.Sitemap = appConfig.i18n.locales
+    .filter((locale) => locale !== appConfig.i18n.defaultLocale)
+    .flatMap((locale) =>
+      defaultRoutes.map((route) => ({
+        ...route,
+        url: route.url === '' ? locale : `${locale}/${route.url}`,
+      }))
+    );
+
+  const allRoutes = [...defaultRoutes, ...localizedRoutes];
+
+  const sitemapData = allRoutes.map((route) => {
     const routeUrl = route.url === '' ? '' : `/${route.url}`;
     return {
-        ...route,
-        url: `https://anythingrandom.net${routeUrl}`,
-      };
-    }
-  );
+      ...route,
+      url: `${process.env.WEB_URL}${routeUrl}`,
+    };
+  });
 
   return sitemapData;
 }
